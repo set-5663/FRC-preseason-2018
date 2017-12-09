@@ -32,7 +32,8 @@ public:
     void AutonomousPeriodic() { }
     void TeleopPeriodic() { }
     void TestPeriodic() {
-      my_robot->TankDrive(my_joy->GetY(),my_joy->GetY());
+      //my_robot->TankDrive(my_joy->GetY(),my_joy->GetY());
+      my_robot->ArcadeDrive(my_joy,true);
      }
 };
 
