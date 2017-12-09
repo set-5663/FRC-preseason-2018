@@ -20,7 +20,7 @@ public:
       left_motor = new Talon(left_motor_port);
       right_motor = new Talon(right_motor_port);
       my_robot = new RobotDrive(left_motor, right_motor);
-      my_joy = new Joystick(0)
+      my_joy = new Joystick(3)
     }
 
     void DisabledInit() { }
@@ -32,7 +32,7 @@ public:
     void AutonomousPeriodic() { }
     void TeleopPeriodic() { }
     void TestPeriodic() {
-      my_robot->TankDrive(0.5,0.5);
+      my_robot->TankDrive(my_joy->GetY(),my_joy->GetY());
      }
 };
 
